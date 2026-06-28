@@ -19,7 +19,7 @@ resource aoai 'Microsoft.CognitiveServices/accounts@2024-10-01' = {
 resource deployment 'Microsoft.CognitiveServices/accounts/deployments@2024-10-01' = {
   parent: aoai
   name: deploymentName
-  sku: { name: 'Standard', capacity: 10 }
+  sku: { name: 'DataZoneStandard', capacity: 10 }
   properties: { model: { format: 'OpenAI', name: 'gpt-4o-mini', version: '2024-07-18' } }
 }
 
